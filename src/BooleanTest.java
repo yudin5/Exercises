@@ -49,6 +49,13 @@ public class BooleanTest {
         char aa = (char) (ff >>> 20);
         System.out.println(aa);
 
-        System.out.println(-7%5);
+        String ss1 = new String("sss");
+        String ss2 = new String(ss1);
+        System.out.println(ss1 == ss2);
+        System.out.println(ss1 == "sss");
+
+        byte bbb = 12;
+        byte k = ++bbb;
+        System.out.println(bbb);
     }
 }
