@@ -1,6 +1,6 @@
 package InnerClasses;
 
-public class Parcell {
+public class Parcel {
 
     class Contents {
         private int i = 11;
@@ -20,7 +20,7 @@ public class Parcell {
     }
 
     public static void main(String[] args) {
-        Parcell p = new Parcell();
+        Parcel p = new Parcel();
         p.ship("Tasmany");
     }
 }
