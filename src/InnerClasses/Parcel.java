@@ -1,5 +1,7 @@
 package InnerClasses;
 
+import java.io.Serializable;
+
 public class Parcel {
 
     class Contents {
