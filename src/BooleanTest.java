@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,25 @@ public class BooleanTest {
         System.out.println(test2.xxx);
     }
 
-    public static void main(String... args) {
+    public static void main(String[] args) {
+        float ff1 = 3.12f;
+        float ff2 = 3.12f;
+        System.out.println(ff1 == ff2);
+        //System.out.println(Float.isNaN(ff1) == Float.isNaN(ff1));
+        System.out.println();
+        float v = 4.11f;
+        double v1 = 4.11;
+        System.out.println(v == v1);
+        System.out.println(Float.isNaN(0.0f / 0.0f));
+        System.out.println(Double.isNaN(Math.sqrt(-1)));
+        System.out.println(new BigDecimal(0.11));
+        Float f1 = 4.11f;
+        Float f2 = 4.11f;
+        System.out.println(f1 != f2);
+        System.out.println(f1 == f2);
+        System.out.println(f1.equals(f2));
+        System.out.println();
+        System.out.println("XXX " + 10 + 20);
         BooleanTest btest = new BooleanTest();
         btest.doSomething();
         //test((char) 34, (byte)44);
