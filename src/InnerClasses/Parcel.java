@@ -9,7 +9,7 @@ public class Parcel {
         public int value() {return i;}
     }
 
-    class Destination {
+    private class Destination {
         private String label;
         Destination(String whereTo) {label = whereTo;}
         String readLabel() {return label;}
@@ -23,7 +23,9 @@ public class Parcel {
 
     public static void main(String[] args) {
         Parcel p = new Parcel();
-        p.ship("Tasmany");
+        p.ship("Tasmania");
+        Destination sdf = p.new Destination("sdsds");
+        System.out.println(sdf.readLabel());
     }
 }
 
