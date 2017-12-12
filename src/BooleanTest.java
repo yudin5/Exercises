@@ -15,7 +15,15 @@ public class BooleanTest {
         System.out.println(test2.xxx);
     }
 
+    //void test(int i) {        System.out.println(i);    }
+    void test(Integer i) { System.out.println(i); }
+    void test(float i) {     }
+    void test(double i) {    }
+
     public static void main(String[] args) {
+        BooleanTest x = new BooleanTest();
+        int y = 5;
+        x.test(y);
         float ff1 = 3.12f;
         float ff2 = 3.12f;
         System.out.println(ff1 == ff2);
