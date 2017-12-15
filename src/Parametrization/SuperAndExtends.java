@@ -10,9 +10,31 @@ public class SuperAndExtends {
     //static void test(int x, int y) {}
     static void test(Integer x, Integer y) {}
 
+    static void varArgs(String s, int i, int j) {}
+    static void varArgs(String string, int... a) {}
+
     public static void main(String[] args) {
+        varArgs("asd", 3, 2);
+        System.out.println('a' + 1);
+        String string = "hello";
+        string = string + "";
+        switch (string) {
+            case "hello":
+                System.out.println(string);
+                break;
+            case "gg":
+                System.out.println("gg");
+                break;
+            case "tt":
+                System.out.println("tt");
+                break;
+            default:
+                System.out.println("ha-ha");
+        }
+        System.out.println(1%9);
         Float[] arrF = new Float[2];
-        for (float f : arrF) {   // NullPointerException !!!
+        arrF[0] = 1.9f;
+        for (Float f : arrF) {   // если "float f : arrF"  - NullPointerException !!!
             System.out.println(f);
         }
         long l4 = 200;
