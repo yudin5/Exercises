@@ -4,9 +4,9 @@ package Initialization;
 // Полный процесс инициализации.
 
 class Insect {
-    /*public static void aa() {
+    public static void aa() {
         System.out.println("Insect static");
-    }*/
+    }
     private int i = 9;
     protected int j;
     Insect() {
@@ -22,9 +22,10 @@ class Insect {
 }
 
 public class Beetle extends Insect {
-    public static void aa() {
+    public final int FIN = 9;
+    /*public static void aa() {
         System.out.println("Beetle static");
-    }
+    }*/
     private int k = printInit("Beetle.k initialized");
     public Beetle() {
         System.out.println("k = " + k);
@@ -35,7 +36,6 @@ public class Beetle extends Insect {
     public static void main(String[] args) {
         System.out.println("Beetle constructor");
         Beetle b = new Beetle();
-        Insect obj = new Beetle();
-
+        Insect obj = new Insect();
     }
 }

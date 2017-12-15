@@ -1,15 +1,36 @@
 package Parametrization;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SuperAndExtends {
     public static void main(String[] args) {
-        List<? extends AAA> list = new ArrayList<>();
-        System.out.println(list.getClass().getName());
+        char ch = 65;
+        System.out.println(ch);
+        Integer N1 = 100;
+        Integer N2 = 100;
+        System.out.println(N1 == N2);
+        int a = 0;
+        int[] b = new int[3];
+        b[++a] = a = 4;
+        System.out.println(a);
+        System.out.println(Arrays.toString(b));
+        a = 0;
+        System.out.println(a++ + ++a);
+        System.out.println(a);
+        System.out.println();
+        List<? extends AAA> aaaList = new ArrayList<BBB>(0);
+        List<? extends BBB> bbbList = new ArrayList<BBB>(1);
+        System.out.println(aaaList.getClass().getName());
+        System.out.println(bbbList.getClass().getName());
+        String aaaS = aaaList.getClass().getName();
+        String bbbS = bbbList.getClass().getName();
+        System.out.println(aaaS == bbbS);
 
-        List<? extends Number> intList = new ArrayList<Integer>();
-        for (Object o : intList) {
+        List<? extends Number> list = new ArrayList<Integer>(5);
+        System.out.println(list.size());
+        for (Object o : list) {
             System.out.println(o);
         }
         AAA o = new CCC();

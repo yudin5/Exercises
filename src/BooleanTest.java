@@ -7,7 +7,11 @@ public class BooleanTest {
     class Test2 {
         int xxx = 333;
     }
-
+    static final int FIN;
+    static {
+        FIN = 5;
+    }
+    
     int xxx = 555;
 
     public void doSomething() {
@@ -17,12 +21,17 @@ public class BooleanTest {
 
     //void test(int i) {        System.out.println(i);    }
     void test(Integer i) { System.out.println(i); }
+    void test(int i) {}
     void test(float i) {     }
     void test(double i) {    }
+    float naturLog() {return 2.718f;}
 
     public static void main(String[] args) {
+        int ee = 512;
+        byte eeB = (byte) ee;
+        System.out.println(eeB);
         BooleanTest x = new BooleanTest();
-        int y = 5;
+        char y = 5;
         x.test(y);
         float ff1 = 3.12f;
         float ff2 = 3.12f;
