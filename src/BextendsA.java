@@ -4,22 +4,21 @@ public class BextendsA {
     }
 }
 
-
-
 class AA {
 
     static {
-        System.out.println("Static super");
+        System.out.println("Static parent");
     }
 
     {
-        System.out.println("Dynamic super");
+        System.out.println("Dynamic parent");
     }
 
     AA() {
         System.out.println("AA");
     }
 }
+
 class BB extends AA {
 
     static {
