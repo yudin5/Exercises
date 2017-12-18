@@ -1,5 +1,5 @@
 package Parametrization;
-
+// + подумать - вопросы про методы Object
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +18,7 @@ public class SuperAndExtends {
     static void varArgs(String s, int i, int j) {}
     static void varArgs(String string, int... a) {}
 
-    static void testFloat(Float x) {
+    static void testFloat(double x) {
         System.out.println(x);
     }
 
