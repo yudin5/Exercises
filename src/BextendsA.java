@@ -1,22 +1,36 @@
 public class BextendsA {
     public static void main(String[] args) {
-        BB obj = new BB();
+        AA obj = new BB();
     }
 }
 
+
+
 class AA {
+
+    static {
+        System.out.println("Static super");
+    }
+
+    {
+        System.out.println("Dynamic super");
+    }
+
     AA() {
-        System.out.println("A");
+        System.out.println("AA");
     }
 }
 class BB extends AA {
 
-    {
-        System.out.println("i");
+    static {
+        System.out.println("Static child");
     }
 
+    {
+        System.out.println("Dynamic child");
+    }
 
     BB() {
-        System.out.println("B");
+        System.out.println("BB");
     }
 }

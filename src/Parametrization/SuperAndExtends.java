@@ -6,6 +6,11 @@ import java.util.List;
 
 public class SuperAndExtends {
 
+    void SuperAndExtends() {
+        System.out.println("slkfdj");
+    } // Можно создать метод SuperAndExtends
+
+    // void localVar() {int i; i++} // Локальную переменную надо явно инициализировать
     static void test(int x, int y) {}
     //static void test(int x, int y) {}
     static void test(Integer x, Integer y) {}
@@ -13,7 +18,17 @@ public class SuperAndExtends {
     static void varArgs(String s, int i, int j) {}
     static void varArgs(String string, int... a) {}
 
+    static void testFloat(Float x) {
+        System.out.println(x);
+    }
+
     public static void main(String[] args) {
+        Integer xI = 1;
+        Double xD = 1.0;
+        System.out.println(xI.equals(xD)); // xI == xD не компилируется
+        System.out.println(xD);
+        float xF = 4f;
+        testFloat(xF);
         varArgs("asd", 3, 2);
         System.out.println('a' + 1);
         String string = "hello";
