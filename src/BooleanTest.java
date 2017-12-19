@@ -1,6 +1,5 @@
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class BooleanTest {
 
@@ -91,7 +90,7 @@ public class BooleanTest {
         System.out.println(bb);
         System.out.println(aa);*/
 
-        int ff = -1;
+        int ff = 50000;
         char aa = (char) (ff >>> 0);
         System.out.println(aa);
 
@@ -103,5 +102,10 @@ public class BooleanTest {
         byte bbb = 12;
         byte k = bbb++;
         System.out.println(k); // 12
+        Integer[] arrInt = new Integer[2];
+        arrInt[0] = 1;
+        arrInt[1] = 2;
+        ArrayList<Integer> listInt = new ArrayList<>(Arrays.asList(arrInt));
+        System.out.println(listInt);
     }
 }

@@ -15,7 +15,7 @@ class AA {
     }
 
     AA() {
-        System.out.println("AA");
+        System.out.println("Constructor AA");
     }
 }
 
@@ -30,6 +30,6 @@ class BB extends AA {
     }
 
     BB() {
-        System.out.println("BB");
+        System.out.println("Constructor BB");
     }
 }
