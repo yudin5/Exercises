@@ -9,6 +9,7 @@ public class BooleanTest {
 
     static final int FIN;
     static char c = 17;
+    static char ch;
 
     static {
         FIN = 5;
@@ -116,5 +117,9 @@ public class BooleanTest {
         char c2 = '\u0031';
         char c3 = 49;
         System.out.println(c1 + c2 + c3);
+        int charInt = 1 + ch;
+        System.out.println(ch);
+        System.out.println(Float.isNaN(ch));
+        System.out.println(charInt);
     }
 }
