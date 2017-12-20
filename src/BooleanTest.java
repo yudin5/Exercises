@@ -8,7 +8,7 @@ public class BooleanTest {
     }
 
     static final int FIN;
-    static char c;
+    static char c = 17;
 
     static {
         FIN = 5;
@@ -21,6 +21,8 @@ public class BooleanTest {
         System.out.println(test2.xxx);
     }
 
+    static void aaa(int... a) {}
+    static void aaa(Integer a) {}
     //void test(int i) {        System.out.println(i);    }
     void test(Integer i) { System.out.println(i); }
     void test(int i) {}
@@ -29,6 +31,7 @@ public class BooleanTest {
     float naturLog() {return 2.718f;}
 
     public static void main(String[] args) {
+        aaa(5);
         // System.out.println(Float.isNaN(0/0)); // java.lang.ArithmeticException: / by zero
         System.out.println(Float.isNaN(0/0f)); // true
         System.out.println(Float.isNaN(0f/0)); // true
@@ -42,10 +45,10 @@ public class BooleanTest {
         System.out.println(f1.isNaN() == f2.isNaN()); // true
         System.out.println(Float.isNaN(ff1) == Float.isNaN(ff1)); // true
         System.out.println(Float.isNaN(5)); // false
-        System.out.println("[" + c + "]"); // Инициализирована по умолчанию
+        System.out.println("[ " + (c + 1) + " ]"); // Инициализирована по умолчанию
         int ee = 512;
         byte eeB = (byte) ee;
-        System.out.println(eeB);
+        System.out.println(eeB == 0); // true
         BooleanTest x = new BooleanTest();
         char y = 5;
         x.test(y);
@@ -53,6 +56,8 @@ public class BooleanTest {
         System.out.println();
         float v = 4.11f;
         double v1 = 4.11;
+        Double v3 = 4.11;
+        System.out.println(v3 == v1); // true
         System.out.println(v == v1); // false
         System.out.println(Double.isNaN(Math.sqrt(-1)));
         System.out.println(new BigDecimal(0.11)); // 0.11000000000000000055511151231257827021181583404541015625
@@ -107,5 +112,9 @@ public class BooleanTest {
         arrInt[1] = 2;
         ArrayList<Integer> listInt = new ArrayList<>(Arrays.asList(arrInt));
         System.out.println(listInt);
+        char c1 = '1';
+        char c2 = '\u0031';
+        char c3 = 49;
+        System.out.println(c1 + c2 + c3);
     }
 }
