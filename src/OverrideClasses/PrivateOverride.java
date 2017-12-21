@@ -1,6 +1,7 @@
 package OverrideClasses;
 
 public class PrivateOverride {
+    public byte getNumber() {return 1;}
     static void test() {
         System.out.println("Parent static");
     }
@@ -19,7 +20,7 @@ public class PrivateOverride {
 }
 
 class Derived extends PrivateOverride {
-
+    public byte getNumber() { return 4;}
     static void test() {
         System.out.println("Child static");
     }

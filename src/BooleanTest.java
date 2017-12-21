@@ -26,12 +26,15 @@ public class BooleanTest {
     static void aaa(Integer a) {}
     //void test(int i) {        System.out.println(i);    }
     void test(Integer i) { System.out.println(i); }
-    void test(int i) {}
-    void test(float i) {     }
-    void test(double i) {    }
+    //void test(int i) {}
+    //void test(float i) {     }
+    //void test(double i) {    }
     float naturLog() {return 2.718f;}
 
     public static void main(String[] args) {
+        //int A = 0;
+        //System.out.println(++A + --A + A++);
+        //System.out.println(A);
         aaa(5);
         // System.out.println(Float.isNaN(0/0)); // java.lang.ArithmeticException: / by zero
         System.out.println(Float.isNaN(0/0f)); // true
@@ -51,7 +54,8 @@ public class BooleanTest {
         byte eeB = (byte) ee;
         System.out.println(eeB == 0); // true
         BooleanTest x = new BooleanTest();
-        char y = 5;
+        int y = 5;
+        int sdf;
         x.test(y);
         System.out.println(ff1 == ff2);
         System.out.println();
