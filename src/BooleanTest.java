@@ -22,7 +22,9 @@ public class BooleanTest {
         System.out.println(test2.xxx);
     }
 
+    static void aaa(byte a) {}
     static void aaa(int... a) {}
+    static void aaa(float a) {}
     static void aaa(Integer a) {}
     //void test(int i) {        System.out.println(i);    }
     void test(Integer i) { System.out.println(i); }
