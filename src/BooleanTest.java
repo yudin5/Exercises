@@ -1,11 +1,9 @@
 import java.math.BigDecimal;
 import java.util.*;
 
-public class BooleanTest {
+import java.util.Comparator;
 
-    class Test2 {
-        int xxx = 333;
-    }
+public class BooleanTest {
 
     static final int FIN;
     static char c = 17;
@@ -14,18 +12,19 @@ public class BooleanTest {
     static {
         FIN = 5;
     }
-    
-    int xxx = 555;
 
-    public void doSomething() {
-        Test2 test2 = new Test2();
-        System.out.println(test2.xxx);
+    static void aaa(byte a) {
+        System.out.println("byte");
     }
-
-    static void aaa(byte a) {}
-    static void aaa(int... a) {}
-    static void aaa(float a) {}
-    static void aaa(Integer a) {}
+    static void aaa(int... a) {
+        System.out.println("int...");
+    }
+    static void aaa(float a) {
+        System.out.println("float");
+    }
+    static void aaa(Integer a) {
+        System.out.println("Integer");
+    }
     //void test(int i) {        System.out.println(i);    }
     void test(Integer i) { System.out.println(i); }
     //void test(int i) {}
@@ -34,6 +33,10 @@ public class BooleanTest {
     float naturLog() {return 2.718f;}
 
     public static void main(String[] args) {
+
+        String line;
+        line = null;
+        System.out.println("line is: " + line);
         //int A = 0;
         //System.out.println(++A + --A + A++);
         //System.out.println(A);
@@ -61,11 +64,13 @@ public class BooleanTest {
         x.test(y);
         System.out.println(ff1 == ff2);
         System.out.println();
+
         float v = 4.11f;
         double v1 = 4.11;
         Double v3 = 4.11;
         System.out.println(v3 == v1); // true
         System.out.println(v == v1); // false
+
         System.out.println(Double.isNaN(Math.sqrt(-1)));
         System.out.println(new BigDecimal(0.11)); // 0.11000000000000000055511151231257827021181583404541015625
         System.out.println(f1 != f2); // true
@@ -73,7 +78,6 @@ public class BooleanTest {
         System.out.println(f1.equals(f2)); // true
         System.out.println("XXX " + 10 + 20); // XXX 1020
         BooleanTest btest = new BooleanTest();
-        btest.doSomething(); // 333 - выводится переменная xxx, принадлежащая классу Test2
         //test((char) 34, (byte)44);
         //Boolean b = new Boolean("/true");
         //System.out.println(b);
@@ -91,9 +95,9 @@ public class BooleanTest {
         list.toArray(array);
         System.out.println(list.get(1));
 
-        int a = 0; int b = 3;
+        int a = 012; int b = 3;
         int c = a / b;
-        System.out.println(c);
+        System.out.println("c = " + c); // 3 !!
 
         int z = 077;
         System.out.println(z);
@@ -106,10 +110,10 @@ public class BooleanTest {
         char aa = (char) (ff >>> 0);
         System.out.println(aa);
 
-        String ss1 = new String("sss");
+        String ss1 = new String("ss");
         String ss2 = new String(ss1);
         System.out.println(ss1 == ss2); // false
-        System.out.println(ss1 == "sss"); // false
+        System.out.println(ss1 == "ss"); // false
 
         byte bbb = 12;
         byte k = bbb++;
@@ -127,5 +131,17 @@ public class BooleanTest {
         System.out.println(ch);
         System.out.println(Float.isNaN(ch));
         System.out.println(charInt);
+
+        System.out.println("Before sorting...");
+        List<Ref049> ref049List = new ArrayList<>();
+        ref049List.add(new Ref049(1));
+        ref049List.add(new Ref049(5));
+        ref049List.add(new Ref049(213));
+        ref049List.add(new Ref049(10));
+        System.out.println(ref049List);
+        System.out.println("After sorting...");
+        ref049List.sort(Comparator.comparing(Ref049::getId)); // Вот, без статического импорта
+        System.out.println(ref049List);
+
     }
 }
