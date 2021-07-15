@@ -1,6 +1,6 @@
 public class BextendsA {
     public static void main(String[] args) {
-        AA obj = new BB();
+        BB obj = new BB();
     }
 }
 
@@ -15,7 +15,7 @@ class AA {
     }
 
     AA() {
-        System.out.println("Constructor AA");
+        System.out.println("Constructor parent");
     }
 }
 
@@ -30,6 +30,6 @@ class BB extends AA {
     }
 
     BB() {
-        System.out.println("Constructor BB");
+        System.out.println("Constructor child");
     }
 }
