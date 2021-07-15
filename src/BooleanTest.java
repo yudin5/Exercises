@@ -1,6 +1,8 @@
 import java.math.BigDecimal;
 import java.util.*;
 
+import java.util.Comparator;
+
 public class BooleanTest {
 
     static final int FIN;
@@ -32,6 +34,10 @@ public class BooleanTest {
 
     public static void main(String[] args) {
 
+
+        String line;
+        line = null;
+        System.out.println("line is: " + line);
         //int A = 0;
         //System.out.println(++A + --A + A++);
         //System.out.println(A);
@@ -126,6 +132,18 @@ public class BooleanTest {
         System.out.println(ch);
         System.out.println(Float.isNaN(ch));
         System.out.println(charInt);
+
+        System.out.println("Before sorting...");
+        List<Ref049> ref049List = new ArrayList<>();
+        ref049List.add(new Ref049(1));
+        ref049List.add(new Ref049(5));
+        ref049List.add(new Ref049(213));
+        ref049List.add(new Ref049(10));
+        System.out.println(ref049List);
+        System.out.println("After sorting...");
+        ref049List.sort(Comparator.comparing(Ref049::getId)); // Вот, без статического импорта
+        System.out.println(ref049List);
+
 
     }
 }
